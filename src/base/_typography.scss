@@ -1,0 +1,25 @@
+@use "./colors" as *;
+/*
+font-family: 'Crimson Pro', serif, 200;
+font-family: 'Lora', serif, 500, 700;
+font-family: 'Montserrat', sans-serif, 400, 500, 700;
+*/
+$crimson: "Crimson Pro", serif;
+$lora: "Lora", serif;
+$montserrat: "Montserrat", sans-serif;
+
+@mixin fontStyles($weight, $size, $family) {
+  font-weight: $weight;
+  font-size: $size;
+  font-family: $family;
+}
+
+a {
+  color: $white-txt;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}

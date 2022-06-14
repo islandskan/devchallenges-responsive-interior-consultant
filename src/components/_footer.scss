@@ -1,0 +1,42 @@
+@use "../base/" as *;
+
+.footer {
+  line-height: 17.07px;
+  text-align: center;
+  color: $footer-txt;
+  padding-top: 75px;
+  &__txt {
+    @include fontStyles(500, 14px, $montserrat);
+    line-height: 17px;
+    &--link {
+      text-decoration: none;
+      color: #a9a9a9;
+      font-weight: 700;
+      transition: color 0.3s ease;
+      width: fit-content;
+      display: inline-block;
+      position: relative;
+      padding: 0 2px;
+      transition: 0.3s ease;
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: $purple;
+        height: 2px;
+        left: 50%;
+        width: 0;
+        bottom: -8px;
+        transition: 0.3s ease-in-out;
+      }
+      &:hover::after {
+        left: 0;
+        width: 100%;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        color: $purple;
+      }
+    }
+  }
+}

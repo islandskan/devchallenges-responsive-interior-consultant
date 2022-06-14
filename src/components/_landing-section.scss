@@ -1,0 +1,145 @@
+@use "../base/" as *;
+
+@media (min-width: 375px) {
+  .txt-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .landing {
+    position: relative;
+    margin-bottom: 74px;
+    &__head {
+      text-align: start;
+      @include fontStyles(500, 36px, $lora);
+      margin-bottom: 25px;
+    }
+    &__txt {
+      @include fontStyles(400, 14px, $montserrat);
+      line-height: 17px;
+      max-width: 250px;
+      margin-bottom: 25px;
+    }
+    &__link {
+      @include fontStyles(700, 14px, $montserrat);
+      position: relative;
+      transition: 0.4s ease-in-out;
+      padding: 8px 8px 8px 0;
+      &::after {
+        font-family: "Material Icons";
+        content: "trending_flat";
+        font-size: 20px;
+        position: absolute;
+        left: 100%;
+        opacity: 0;
+        transform: scaleX(1.1), translateX(-30%);
+        transition: 0.4s ease-in-out;
+      }
+      &:hover,
+      &:focus {
+        &::after {
+          opacity: 1;
+          transform: translateX(30%);
+        }
+      }
+    }
+    &__img {
+      max-width: 100%;
+      display: block;
+      margin: 37px 0 0 0;
+    }
+  }
+}
+
+@media (min-width: 425px) {
+  .landing {
+    &__head {
+      width: fit-content;
+    }
+    &__txt {
+      max-width: 350px;
+    }
+    &__link {
+      width: fit-content;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .txt-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .landing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__head {
+      @include fontStyles(500, 38px, $lora);
+    }
+    &__txt {
+      @include fontStyles(400, 18px, $montserrat);
+      line-height: 22px;
+      text-align: center;
+    }
+    &__link {
+      @include fontStyles(700, 18px, $montserrat);
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .txt-container {
+    display: flex;
+    align-items: flex-start;
+    margin-right: 30px;
+  }
+  .landing {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &__head {
+      text-align: start;
+    }
+    &__txt {
+      @include fontStyles(400, 18px, $montserrat);
+      line-height: 22px;
+      text-align: start;
+    }
+    &__link {
+      @include fontStyles(700, 18px, $montserrat);
+    }
+    &__img {
+      max-width: 60%;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .landing {
+    &__txt {
+      margin-bottom: 38px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .txt-container {
+    width: 410px;
+  }
+  .landing {
+    &__head {
+      @include fontStyles(500, 48px, $lora);
+      line-height: 61px;
+    }
+    &__txt {
+      @include fontStyles(400, 24px, $montserrat);
+      line-height: 29px;
+      margin-bottom: 48px;
+    }
+    &__img {
+      max-width: 830px;
+    }
+  }
+}

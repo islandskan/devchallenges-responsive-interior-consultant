@@ -1,0 +1,27 @@
+@use "../base/" as *;
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 38px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: $dark-bg;
+  padding: 19px 0 0 0;
+}
+
+.logo {
+  width: 103px;
+  height: 31px;
+  border: 1px solid $white-txt;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__txt {
+    @include fontStyles(200, 14px, $crimson);
+    text-transform: uppercase;
+  }
+}

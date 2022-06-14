@@ -1,0 +1,120 @@
+@use "../base/" as *;
+
+@media (min-width: 375px) {
+  .hamburger-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    right: 19px;
+    height: 20px;
+    width: 20px;
+    z-index: 10;
+    opacity: 1;
+    &__bar {
+      height: 3px;
+      margin-top: 4px;
+      width: 22px;
+      background-color: $white-txt;
+      border-radius: 2px;
+      transform-origin: 21px;
+      transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+    &--open &__bar:first-child {
+      transform: rotate(-45deg);
+    }
+    &--open &__bar:nth-child(2) {
+      opacity: 0;
+    }
+    &--open &__bar:nth-child(3) {
+      transform: rotate(45deg);
+    }
+  }
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    height: 100vh;
+    width: 100vw;
+    z-index: 2;
+    background-color: $dark-bg;
+    transition: transform 0.4s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--open {
+      transform: translateX(-100%);
+    }
+
+    & ul {
+      display: flex;
+      flex-direction: column;
+      width: fit-content;
+      padding: 10px;
+      height: 200px;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    &__item {
+      @include fontStyles(500, 18px, $montserrat);
+      text-align: center;
+      line-height: 22px;
+      max-width: 92px;
+      border: 1px solid transparent;
+      display: inline-block;
+      position: relative;
+      padding: 0 2px;
+      margin: 0 10px;
+      transition: 0.3s ease;
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: $white-txt;
+        height: 2px;
+        left: 50%;
+        width: 0;
+        bottom: -8px;
+        transition: 0.3s ease-in-out;
+      }
+      &:hover::after {
+        left: 0;
+        width: 100%;
+      }
+      &:hover,
+      &:active {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .hamburger-button {
+    visibility: hidden;
+  }
+  .nav {
+    position: static;
+    width: 60%;
+    height: 22px;
+
+    & ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      padding: 10px;
+      height: 22px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .nav {
+    width: 50%;
+  }
+}

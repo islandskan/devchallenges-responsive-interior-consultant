@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,
+  maximum-scale=5"
+    />
+
+    <link rel="icon" href="devchallenges.png" />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://devchallenges.io/"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@500;700&family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/style.css" />
+    <title>Devchallenges</title>
+  </head>
+  <body>
+    <div class="body-wrapper">
+      <header>
+        <a href="#">
+          <div class="logo">
+            <h6 class="logo__txt">This interior</h6>
+          </div>
+        </a>
+        <button
+          class="hamburger-button"
+          id="hamburger-button"
+          onclick="toggleNavigation()"
+        >
+          <div class="hamburger-button__bar"></div>
+          <div class="hamburger-button__bar"></div>
+          <div class="hamburger-button__bar"></div>
+        </button>
+        <nav class="nav" id="nav">
+          <ul>
+            <li class="nav__item"><a href="#">Home</a></li>
+            <li class="nav__item"><a href="#">Collection</a></li>
+            <li class="nav__item"><a href="#">About</a></li>
+            <li class="nav__item"><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="landing">
+        <div class="txt-container">
+          <h1 class="landing__head">Modern interior</h1>
+          <p class="landing__txt">
+            A full-Service residential & commercial interior design and staging
+            company offering professional organizing & <br />
+            eco-services.
+          </p>
+          <a href="#" class="landing__link">Read more</a>
+        </div>
+
+        <img src="./img/photo1.png" alt="light room" class="landing__img" />
+        <div class="card">
+          <div class="card__head">
+            <img src="./img/photo2.png" alt="portrait of Aliza Webber" />
+            <div class="card__head-txt">
+              <p class="card__head--name">Aliza Webber</p>
+              <p class="card__head--title">Interior designer</p>
+            </div>
+          </div>
+          <div class="card__body">
+            <h4 class="card__body--txt">
+              Designed in 2020 by <br />
+              Aliza Webber
+            </h4>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <p class="footer__txt">
+          created by
+          <a href="https://github.com/islandskan" class="footer__txt--link"
+            >islandskan</a
+          >
+          - devChallenges.io
+        </p>
+      </footer>
+    </div>
+    <script>
+      const toggle = (elementId) => {
+        const element = document.getElementById(elementId);
+
+        if (element.classList.contains(elementId + "--open")) {
+          element.classList.remove(elementId + "--open");
+        } else {
+          element.classList.add(elementId + "--open");
+        }
+      };
+
+      const toggleNavigation = () => {
+        toggle("nav");
+        toggle("hamburger-button");
+      };
+    </script>
+  </body>
+</html>

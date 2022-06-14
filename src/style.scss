@@ -1,0 +1,35 @@
+@use "base" as *;
+@use "components" as *;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $dark-bg;
+  color: $white-txt;
+}
+
+@media (min-width: 375px) {
+  .body-wrapper {
+    width: 95%;
+    margin: 0 auto 24px auto;
+    position: relative;
+  }
+}
+
+@media (min-width: 1440px) {
+  .body-wrapper {
+    width: 85%;
+  }
+}
+
+@media (min-width: 1800px) {
+  .body-wrapper {
+    width: 80%;
+  }
+}
