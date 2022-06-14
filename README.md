@@ -1,5 +1,3 @@
-
-
 <h1 align="center">Devchallenges - Interior Consultant</h1>
 
 <div align="center">
@@ -8,11 +6,11 @@
 
 <div align="center">
   <h3>
-    <a href="https://{your-demo-link.your-domain}">
+    <a href="https://islandskan-interior-consultant.netlify.app/">
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://github.com/islandskan/devchallenges-responsive-interior-consultant">
       Solution
     </a>
     <span> | </span>
@@ -36,22 +34,18 @@
 
 ## Overview
 
-<!--![screenshot]()-->
-
+![screenshot](./img_01.jpeg)
+![screenshot](./img_02.jpeg)
 
 ### Built With
 
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
 
-
 ## Features
-
 
 ## Acknowledgements
 
-
 ## Contact
 
-- Website [your-website.com](https://{your-web-site-link})
-- GitHub [@your-username](https://{github.com/your-usermame})
-- Twitter [@your-twitter](https://{twitter.com/your-username})
+- GitHub [@islandskan](https://github.com/islandskan)
+- LinkedIn [Sigridur Eggertsdottir](https://www.linkedin.com/in/sigridureggertsdottir/)
