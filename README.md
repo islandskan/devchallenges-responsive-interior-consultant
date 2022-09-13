@@ -24,18 +24,18 @@
 
 ## Table of Contents
 
-- [Overview](#overview)
-  - [Built With](#built-with)
-- [Features](#features)
-- [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
+-   [Overview](#overview)
+    -   [Built With](#built-with)
+-   [Features](#features)
+-   [Contact](#contact)
+-   [Acknowledgements](#acknowledgements)
 
 <!-- OVERVIEW -->
 
 ## Overview
 
-![screenshot](./img_01.jpeg)
-![screenshot](./img_02.jpeg)
+![screenshot](mobile-preview.jpeg)
+![screenshot](desktop-preview.jpeg)
 
 ### Built With
 
@@ -47,5 +47,5 @@
 
 ## Contact
 
-- GitHub [@islandskan](https://github.com/islandskan)
-- LinkedIn [Sigridur Eggertsdottir](https://www.linkedin.com/in/sigridureggertsdottir/)
+-   GitHub [@islandskan](https://github.com/islandskan)
+-   LinkedIn [Sigridur Eggertsdottir](https://www.linkedin.com/in/sigridureggertsdottir/)
